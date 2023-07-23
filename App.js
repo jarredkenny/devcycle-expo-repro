@@ -26,4 +26,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default withDVCProvider('XXXXXXXXX', App)
+export default withDVCProvider({ sdkKey: '<DEVCYCLE_CLIENT_SDK_KEY>' }, App)
