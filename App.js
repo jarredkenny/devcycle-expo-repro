@@ -1,7 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import 'react-native-get-random-values'
+import DeviceInfo from 'react-native-device-info'
+import '@react-native-async-storage/async-storage'
+import { withDVCProvider } from '@devcycle/react-native-client-sdk'
 
-export default function App() {
+global.DeviceInfo = DeviceInfo
+
+function App() {
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
@@ -18,3 +25,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default withDVCProvider('XXXXXXXXX', App)
